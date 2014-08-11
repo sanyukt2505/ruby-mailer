@@ -3,8 +3,10 @@ require 'json'
 require 'pony'
 
 get '/' do
-  'Hello Appa!'
+  'Hello Mailer!'
 end
+
+#Post to send the email
 
 post '/' do
   params = JSON.parse request.body.read
@@ -18,8 +20,8 @@ post '/' do
           :via_options => {
             :address        => 'mailtrap.io',
             :port           => '2525',
-            :user_name      => 'my_user_name',
-            :password       => 'my_password',
+            :user_name      => '228774eac31a978aa',
+            :password       => '18835f1dae148a',
             :authentication => :plain, 
             :domain         => "mailtrap.io" 
           }
